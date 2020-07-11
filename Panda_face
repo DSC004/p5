@@ -1,0 +1,78 @@
+//By Dhruv Chatrani(drat)
+var i=50;
+j=-1;
+var x=100;
+function setup() {
+  createCanvas(600, 600);
+}
+
+function draw() {
+  background(mouseX,mouseY,50);
+  i++;
+  if(i==200)
+    i=50;
+  fill(0);
+
+
+  ellipse(150, 150, 150, 150);
+  ellipse(450, 150, 150, 150);
+  fill(50);
+  ellipse(150, 150, 120, 120);
+  ellipse(450, 150, 120, 120);
+  fill(255, 150, 150);
+  ellipse(150, 150, 80, 80);
+  ellipse(450, 150, 80, 80);
+
+
+  fill(255);
+  strokeWeight(5);
+  ellipse(300, 260, 370, 330);
+
+
+  fill(0);
+  translate(width / 2, height / 2);
+  rotate(PI / 3);
+  ellipse(-10, -100, 160, 100);
+  fill(100);
+  ellipse(-10, -100, 80, 50);
+  rotate(PI / 3);
+  fill(0);
+  ellipse(-10, 100, 160, 100);
+  fill(100);
+  ellipse(-10, 100, 80, 50);
+  rotate(PI / 3);
+  fill(255, x, x, 150);
+  x=x+j;
+  if(x==0)
+    j=+1;
+  if(x==150)
+    j=-1;
+  noStroke();
+  ellipse(110, -25, 40, 20);
+  ellipse(-110, -25, 40, 20);
+  fill(255);
+  stroke(0);
+  strokeWeight(5);
+  ellipse(0, -15, 180, 150);
+  ellipse(80, 60, 30, 30);
+  ellipse(-80, 60, 30, 30);
+  fill(0);
+  if(i<=120 || i>=140)
+  {
+  arc(80, 60, 15, 15, 0, PI + QUARTER_PI);
+  arc(-80, 60, 15, 15, 0, PI + QUARTER_PI);
+  }
+
+
+  fill(0);
+  ellipse(0, 10, 100, 70);
+  rotate(PI);
+
+
+  noFill();
+  arc(30, 25, 60, 60, HALF_PI, PI);
+  arc(-30, 25, 60, 60, 0, HALF_PI);
+
+
+
+}
